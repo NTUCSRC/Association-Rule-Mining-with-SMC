@@ -17,5 +17,7 @@ pip install -r requirements.txt
 ## Running Example
 
 ```
-$ 
+python .\secure-multipaty-computation\apriori.py -M3 -I0
+python .\secure-multipaty-computation\apriori.py -M3 -I1
+python .\secure-multipaty-computation\apriori.py -M3 -I2
 ```

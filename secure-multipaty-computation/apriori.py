@@ -13,13 +13,6 @@ async def main():
     if mpc.pid == 0:
         print("You are the first party")
 
-    # input min_support and min_confidence
-    # min_support = float(input('Enter min support: '))
-    # min_confidence = float(input('Enter min confidence: '))
-
-    min_support = 0.2
-    min_confidence = 0.5
-
     # read data
     for i in range(m):
         if mpc.pid == i:
@@ -36,6 +29,15 @@ async def main():
     print(df.shape)
 
     await mpc.start()
+    # input min_support and min_confidence
+    support = 0
+    confidence = 0
+    if mpc.pid == 0:
+        support = float(input('Enter min support: '))
+        confidence = float(input('Enter min confidence: '))
+
+    min_support = await mpc.transfer(support, senders=0)
+    min_confidence = await mpc.transfer(confidence, senders=0)
 
     # calculate total items
     our_records_num = mpc.input(secint(df.shape[0]))
@@ -50,6 +52,7 @@ async def main():
 
     # sort unique items
     unique_items = sorted(unique_items)
+    unique_items = await mpc.transfer(unique_items, senders=0)
 
     # calculate support
     support_candidate = []
@@ -84,8 +87,7 @@ async def main():
                     support_candidate.append([new_subset, items_num])
                     support_remaining.append([new_subset, items_num])
 
-    print(cnt)
-    print(support_remaining)
+    # print(support_remaining)
 
     # calculate confidence
     # result format: [antecedent, consequent, support, confidence]

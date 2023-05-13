@@ -13,3 +13,9 @@ python -m venv smc
 
 pip install -r requirements.txt
 ```
+
+## Running Example
+
+```
+$ 
+```

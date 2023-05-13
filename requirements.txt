@@ -1,3 +1,5 @@
 pandas==2.0.1
 mlxtend==0.22.0
 mpyc==0.9
+gmpy2==2.1.5
+imblearn==0.0

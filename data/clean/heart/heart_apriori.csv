@@ -1,26 +1,26 @@
 support,itemsets
 0.5,frozenset({'HeartDisease'})
-0.48984400686808166,frozenset({'Smoking'})
-0.2409856427866876,frozenset({'DiffWalking'})
-0.22295692836006284,frozenset({'Diabetic'})
-0.28449567091659667,frozenset({'PhysicalActivity'})
-0.2036861140539948,frozenset({'BMI_18.5_24'})
-0.42792167464289627,frozenset({'BMI_24_30'})
-0.3527928981112775,frozenset({'BMI_30_100'})
-0.37290395645343954,frozenset({'PhysicalNotHealth'})
-0.3462353413948051,frozenset({'MentalNotHealth'})
-0.5296825338837541,frozenset({'isMale'})
-0.4703174661162459,frozenset({'isFemale'})
-0.2396156796843605,frozenset({'Age_60_69'})
-0.23662002703393856,frozenset({'Age_70_79'})
+0.49263873159682897,frozenset({'Smoking'})
+0.24253826763599168,frozenset({'DiffWalking'})
+0.22494794140211158,frozenset({'Diabetic'})
+0.2870529353742739,frozenset({'PhysicalActivity'})
+0.20361304935520402,frozenset({'BMI_18.5_24'})
+0.4296386950644796,frozenset({'BMI_24_30'})
+0.3517517261535089,frozenset({'BMI_30_100'})
+0.37281262557995104,frozenset({'PhysicalNotHealth'})
+0.3479523618163884,frozenset({'MentalNotHealth'})
+0.5278011178898915,frozenset({'isMale'})
+0.4721988821101085,frozenset({'isFemale'})
+0.2403280604975706,frozenset({'Age_60_69'})
+0.2363825667628685,frozenset({'Age_70_79'})
 0.29293464362693167,"frozenset({'Smoking', 'HeartDisease'})"
-0.21334892046907536,"frozenset({'BMI_24_30', 'HeartDisease'})"
-0.23656522850984546,"frozenset({'HeartDisease', 'PhysicalNotHealth'})"
+0.21334892046907536,"frozenset({'HeartDisease', 'BMI_24_30'})"
+0.23656522850984546,"frozenset({'PhysicalNotHealth', 'HeartDisease'})"
 0.2947977934460965,"frozenset({'HeartDisease', 'isMale'})"
 0.20520220655390348,"frozenset({'HeartDisease', 'isFemale'})"
-0.20918423263800096,"frozenset({'BMI_24_30', 'Smoking'})"
-0.2064991049574398,"frozenset({'Smoking', 'PhysicalNotHealth'})"
-0.2867424104044131,"frozenset({'Smoking', 'isMale'})"
-0.20310159646366857,"frozenset({'Smoking', 'isFemale'})"
-0.2507032477258612,"frozenset({'BMI_24_30', 'isMale'})"
-0.20032513790961898,"frozenset({'isFemale', 'MentalNotHealth'})"
+0.21155883534870126,"frozenset({'Smoking', 'BMI_24_30'})"
+0.20859971504767472,"frozenset({'Smoking', 'PhysicalNotHealth'})"
+0.2884594308259964,"frozenset({'Smoking', 'isMale'})"
+0.20417930077083257,"frozenset({'Smoking', 'isFemale'})"
+0.25115990209330363,"frozenset({'isMale', 'BMI_24_30'})"
+0.20275453914441238,"frozenset({'MentalNotHealth', 'isFemale'})"

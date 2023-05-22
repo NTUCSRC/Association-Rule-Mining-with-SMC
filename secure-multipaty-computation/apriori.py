@@ -3,6 +3,7 @@ import random
 import sys
 from mpyc.runtime import mpc
 from imblearn.under_sampling import RandomUnderSampler
+import time
 
 
 async def main():
@@ -29,12 +30,15 @@ async def main():
     print(df.shape)
 
     await mpc.start()
+    start_time = time.time()
     # input min_support and min_confidence
     support = 0
     confidence = 0
     if mpc.pid == 0:
-        support = float(input('Enter min support: '))
-        confidence = float(input('Enter min confidence: '))
+        # support = float(input('Enter min support: '))
+        # confidence = float(input('Enter min confidence: '))
+        support = float(0.2)
+        confidence = float(0.45)
 
     min_support = await mpc.transfer(support, senders=0)
     min_confidence = await mpc.transfer(confidence, senders=0)
@@ -48,6 +52,7 @@ async def main():
     minimum_support = min_support * total_num
 
     # get all unique items
+    
     unique_items = set(df.columns)
 
     # sort unique items
@@ -119,6 +124,8 @@ async def main():
                 result.append([antecedent_set, consequent_set, support_union, confidence])
 
     await mpc.shutdown()
+
+    print("Elapsed Time: ", time.time() - start_time)
 
 
     df_result = pd.DataFrame(result, columns=['antecedent', 'consequent', 'support', 'confidence'])

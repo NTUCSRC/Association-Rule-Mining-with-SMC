@@ -1,0 +1,46 @@
+function smc_arm()    
+    df = pd.read_csv('local file')
+    df = randomUnderSampling(df)
+    
+    min_support = 0.2
+    min_confidence = 0.5
+    
+    # First Phase
+    If party_no Is 0
+        broadcast min_support, min_confidence,
+                                and order of items
+    
+    total_num = BGW(sum(parties_data_size))
+    min_support_num = min_support * total_num
+    
+    # Second Phase
+    frequent_itemset= []
+    
+    For each subset of all_items
+        support_count = BGW(sum(subset_support))
+        If support_count >= min_support_num
+            frequent_itemset.push(subset)
+    
+    # Third Phase
+    rule = []
+    For antecedent in frequent_itemset
+        For consequent in frequent_itemset
+            union_set = union(antecedent, consequent)
+            support_union_cnt = BGW(sum(union_set_support))
+            support_antecedent = BGW(sum(antecedent_support))
+            
+            confidence = support_union_cnt / support_antecedent
+            
+            if confidence >= min_confidence
+                rule.push([antecedent, consequent, confidence])
+
+    return rule
+        
+        
+        
+
+
+
+
+
+
